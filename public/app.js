@@ -24,11 +24,13 @@ function boxClicked(e)
             else
                 result.innerHTML='Player O won!🎉'
         }
+        
         currentPlayer=currentPlayer==X_TEXT?O_TEXT:X_TEXT
-        if(currentPlayer==X_TEXT)
-                result.innerHTML='Player X Turn'
-            else
-                result.innerHTML='Player O Turn'
+        // if(currentPlayer==X_TEXT)
+        //     result.innerHTML='Player X Turn'
+        // else
+        //     result.innerHTML='Player O Turn'
+
     }
 }
 const conditions = [
