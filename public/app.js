@@ -19,7 +19,8 @@ function boxClicked(e)
         e.target.innerText=currentPlayer
 
         if(PlayerHasWon()!==false){
-            
+            if(currentPlayer)
+            result.innerHTML='${currentPlayer} has won!'
         }
         currentPlayer=currentPlayer==X_TEXT?O_TEXT:X_TEXT
     }
