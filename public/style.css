@@ -31,7 +31,7 @@ h1{
   flex-direction:column;
 }
 
-#gameboard{
+#box{
   display:flex;
   margin-top:35px;
   align-items:center;
@@ -39,7 +39,7 @@ h1{
   flex-wrap:wrap;
 }
 
-.box{
+.btn{
   height:75px;
   width:75px;
   align-items: center;
