@@ -23,6 +23,7 @@ function boxClicked(e)
                 result.innerHTML='Player X won!🎉'
             else
                 result.innerHTML='Player O won!🎉'
+            currentPlayer=''
         }
         
         currentPlayer=currentPlayer==X_TEXT?O_TEXT:X_TEXT
@@ -61,6 +62,7 @@ function reset(){
         box.innerText=''
     })
     currentPlayer=X_TEXT
+    result.innerHTML=''
 }
 startGame()
 
