@@ -1,5 +1,5 @@
 let playerText=document.getElementById('playerText')
-let resetBtn=document.getElementById('resetBtn')
+let resetBtn=document.getElementById('reset')
 let boxes=Array.from(document.getElementById('box'))
 
 const O_TEXT="O"
@@ -45,7 +45,17 @@ function PlayerHasWon(){
     }
     return false
 }
+
+function reset(){
+    spaces.fill(null)
+    boxes.forEach(box=>{
+        box.innerText=''
+    })
+    currentPlayer=X_TEXT
+}
 startGame()
+
+
 // // Function to handle player moves
 // const ticTacToe = (element, index) => {
 //     // Your game logic here
