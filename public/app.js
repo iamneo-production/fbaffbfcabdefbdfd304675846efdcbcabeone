@@ -1,7 +1,7 @@
 let playerText=document.getElementById('playerText')
 let resetBtn=document.getElementById('resetBtn')
 let boxes=Array.from(document.getElementsByClassName('box'))
-let b1=document.getElementsByClassName('box')
+const b1=document.getElementsByClassName('box')
 
 const O_TEXT="O"
 const X_TEXT="X"
