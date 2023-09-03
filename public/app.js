@@ -20,6 +20,7 @@ function boxClicked(e)
 
         if(PlayerHasWon()!==false)
         {
+            document.getElementsByClassName('box').disabled=true
             if(currentPlayer==X_TEXT){
                 result.innerHTML='Player X won!🎉'}
             else{
@@ -52,6 +53,7 @@ function PlayerHasWon(){
         if(spaces[a] && (spaces[a]==spaces[b] && spaces[a]==spaces[c]))
             return [a,b,c]
     }
+    
     return false
 }
 
