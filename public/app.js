@@ -1,6 +1,7 @@
 let playerText=document.getElementById('playerText')
 let resetBtn=document.getElementById('resetBtn')
 let boxes=Array.from(document.getElementsByClassName('box'))
+let b1=document.getElementsByClassName('box')
 
 const O_TEXT="O"
 const X_TEXT="X"
@@ -18,21 +19,20 @@ function boxClicked(e)
         spaces[id]=currentPlayer
         e.target.innerText=currentPlayer
 
+        if(currentPlayer==X_TEXT)
+            result.innerHTML='Player O Turn'
+        else
+            result.innerHTML='Player X Turn'
+
         if(PlayerHasWon()!==false)
         {
-            document.getElementsByClassName('box').disabled=true
+            b1.disabled=true;
             if(currentPlayer==X_TEXT){
                 result.innerHTML='Player X won!🎉'}
             else{
                 result.innerHTML='Player O won!🎉'}
         }
-        
         currentPlayer=currentPlayer==X_TEXT?O_TEXT:X_TEXT
-        // if(currentPlayer==X_TEXT)
-        //     result.innerHTML='Player X Turn'
-        // else
-        //     result.innerHTML='Player O Turn'
-
     }
 }
 const conditions = [
