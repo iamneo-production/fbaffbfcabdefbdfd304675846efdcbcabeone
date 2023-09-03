@@ -1,10 +1,9 @@
 let playerText=document.getElementById('playerText')
-let reset=document.getElementById('reset')
+let resetBtn=document.getElementById('resetBtn')
 let boxes=Array.from(document.getElementById('box'))
 
 const O_TEXT="O"
 const X_TEXT="X"
-
 let currentPlayer=X_TEXT
 let spaces=Array(9).fill(null)
 
@@ -21,6 +20,7 @@ function boxClicked(e)
 
         if(PlayerHasWon()!==false){
             playerText.innerHTML='${currentPlayer} has won!'
+            return
         }
         currentPlayer=currentPlayer==X_TEXT?O_TEXT:X_TEXT
     }
@@ -40,13 +40,13 @@ function PlayerHasWon(){
     for(const condition of conditions){
         let[a,b,c]=condition
 
-        if(spaces[a] && spaces[a]==spaces[b] && spaces[a]==spaces[c])
+        if(spaces[a] && (spaces[a]==spaces[b] && spaces[a]==spaces[c]))
             return [a,b,c]
     }
     return false
 }
 
-reser
+restoreOriginalArgs.addEventListener('click',reset)
 function reset(){
     spaces.fill(null)
     boxes.forEach(box=>{
