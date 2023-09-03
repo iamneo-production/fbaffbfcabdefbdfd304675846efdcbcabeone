@@ -19,8 +19,7 @@ function boxClicked(e)
         e.target.innerText=currentPlayer
 
         if(PlayerHasWon()!==false){
-            playerText.innerHTML='${currentPlayer} has won!'
-            return
+            
         }
         currentPlayer=currentPlayer==X_TEXT?O_TEXT:X_TEXT
     }
@@ -46,7 +45,7 @@ function PlayerHasWon(){
     return false
 }
 
-restoreOriginalArgs.addEventListener('click',reset)
+resetBtn.addEventListener('click',reset)
 function reset(){
     spaces.fill(null)
     boxes.forEach(box=>{
