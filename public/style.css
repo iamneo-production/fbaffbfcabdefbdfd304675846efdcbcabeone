@@ -50,7 +50,21 @@ h1{
   opacity: 0.5;
 }
 
+.result{
+  background-color: white;
+  opacity: 0.1;
+  font-size:25px;
+  text-shadow: 2px 2px #ffffff;
+}
+
 button:hover{
   cursor:pointer;
   transform:translateY(-2px);
+}
+
+button{
+  padding: 10px 20px;
+  text-align:center;
+  border-color:black;
+  border-radius:10px;
 }
