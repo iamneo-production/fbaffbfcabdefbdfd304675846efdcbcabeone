@@ -76,7 +76,7 @@ h1{
 
 button:hover{
   cursor:pointer;
-  transform:translateY(-2px);
+  transform:translateY(-1px);
 }
 
 button{
