@@ -22,3 +22,19 @@ h1{
   text-shadow:2px 2px 4px #000000;
 }
 
+.container{
+  padding:40px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+#gameboard{
+  display:flex;
+  margin-top:35px;
+  align-items:center;
+}
+
+.box{
+  
+}
