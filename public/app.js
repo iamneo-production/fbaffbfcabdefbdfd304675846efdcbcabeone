@@ -1,5 +1,5 @@
 let playerText=document.getElementById('playerText')
-let resetBtn=document.getElementById('reset')
+let reset=document.getElementById('reset')
 let boxes=Array.from(document.getElementById('box'))
 
 const O_TEXT="O"
@@ -46,6 +46,7 @@ function PlayerHasWon(){
     return false
 }
 
+reser
 function reset(){
     spaces.fill(null)
     boxes.forEach(box=>{
