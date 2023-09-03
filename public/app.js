@@ -19,10 +19,12 @@ function boxClicked(e)
         spaces[id]=currentPlayer
         e.target.innerText=currentPlayer
 
+        if(PlayerHasWon()!==false){
+            playerText.innerHTML='${currentPlayer} has won!'
+        }
         currentPlayer=currentPlayer==X_TEXT?O_TEXT:X_TEXT
     }
 }
-
 const conditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -38,8 +40,10 @@ function PlayerHasWon(){
     for(const condition of conditions){
         let[a,b,c]=condition
 
-        if(spaces[i])
+        if(spaces[a] && spaces[a]==spaces[b] && spaces[a]==spaces[c])
+            return [a,b,c]
     }
+    return false
 }
 startGame()
 // // Function to handle player moves
