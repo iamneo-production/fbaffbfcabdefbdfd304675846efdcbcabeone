@@ -46,5 +46,11 @@ h1{
   border-right:2px solid;
   border-bottom: 2px solid;
   border-radius:25px;
-  background-color: ;
+  background-color: white;
+  opacity: 0.5;
+}
+
+button:hover{
+  cursor:pointer;
+  transform:translateY(-2px);
 }
